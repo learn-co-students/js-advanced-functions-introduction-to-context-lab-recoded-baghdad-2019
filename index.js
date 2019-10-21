@@ -19,6 +19,7 @@ function createTimeInEvent(employeeArray,timeIn){
 
 let hourTime=timeIn.split(' ')[1]
 let dateTime=timeIn.split(' ')[0]
-  employeeArray.timeInEvents={type:"TimeIn",hour:hourTime,date:dateTime}
-  return employeeArray
+let newArray=createEmployeeRecord(employeeArray)
+  newArray.timeInEvents={type:"TimeIn",hour:hourTime,date:dateTime}
+  return newArray
 }
