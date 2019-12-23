@@ -75,21 +75,21 @@ describe("The payroll system", function () {
       it("creates the correct type", function () {
         let bpRecord = createEmployeeRecord(["Byron", "Poodle", "Mascot", 3])
         let updatedBpRecord = createTimeInEvent(bpRecord, "2014-02-28 1400")
-        let newEvent = updatedBpRecord.timeInEvents[0]
+        let newEvent = updatedBpRecord.timeInEvents
         expect(newEvent.type).to.equal("TimeIn")
       })
 
       it("extracts the correct date", function () {
         let bpRecord = createEmployeeRecord(["Byron", "Poodle", "Mascot", 3])
         let updatedBpRecord = createTimeInEvent(bpRecord, "2014-02-28 1400")
-        let newEvent = updatedBpRecord.timeInEvents[0]
+        let newEvent = updatedBpRecord.timeInEvents
         expect(newEvent.date).to.eq("2014-02-28");
       })
 
       it("extracts the correct hour", function () {
         let bpRecord = createEmployeeRecord(["Byron", "Poodle", "Mascot", 3])
         let updatedBpRecord = createTimeInEvent(bpRecord, "2014-02-28 1400")
-        let newEvent = updatedBpRecord.timeInEvents[0]
+        let newEvent = updatedBpRecord.timeInEvents
         expect(newEvent.hour).to.eq(1400);
       })
     })
@@ -107,21 +107,21 @@ describe("The payroll system", function () {
       it("creates the correct type", function () {
         let bpRecord = createEmployeeRecord(["Byron", "Poodle", "Mascot", 3])
         let updatedBpRecord = createTimeOutEvent(bpRecord, "2015-02-28 1700")
-        let newEvent = updatedBpRecord.timeOutEvents[0]
+        let newEvent = updatedBpRecord.timeOutEvents
         expect(newEvent.type).to.equal("TimeOut")
       })
 
       it("extracts the correct date", function () {
         let bpRecord = createEmployeeRecord(["Byron", "Poodle", "Mascot", 3])
         let updatedBpRecord = createTimeOutEvent(bpRecord, "2015-02-28 1700")
-        let newEvent = updatedBpRecord.timeOutEvents[0]
+        let newEvent = updatedBpRecord.timeOutEvents
         expect(newEvent.date).to.eq("2015-02-28");
       })
 
       it("extracts the correct hour", function () {
         let bpRecord = createEmployeeRecord(["Byron", "Poodle", "Mascot", 3])
         let updatedBpRecord = createTimeOutEvent(bpRecord, "2015-02-28 1700")
-        let newEvent = updatedBpRecord.timeOutEvents[0]
+        let newEvent = updatedBpRecord.timeOutEvents
         expect(newEvent.hour).to.eq(1700);
       })
     })
