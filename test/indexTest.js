@@ -315,7 +315,7 @@ describe("The payroll system", function () {
             expect(calculatePayroll).to.exist
           })
 
-          it("correctly sums the payroll burden to $11,880 when passed an array of employee records", function () {
+          it("correctly sums the payroll burden to $12,480 when passed an array of employee records", function () {
             let employeeRecords = createEmployeeRecords(csvDataEmployees)
             employeeRecords.forEach(function (rec) {
               let timesInRecordRow = csvTimesIn.find(function (row) {
